@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="A personal application for storing and verifying encrypted vault backups in Google Drive.">
+  <title>Personal Encrypted Vault Backup</title>
+  <link rel="canonical" href="https://nicklause2.github.io/">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="page">
+    <header><a class="brand" href="./">Personal Encrypted Vault Backup</a><nav aria-label="Main"><a href="./privacy/">Privacy</a><a href="./terms/">Terms</a></nav></header>
+    <main>
+      <p class="eyebrow">Personal use · Encrypted backups</p>
+      <h1>A private recovery plan.<br>A small public explanation.</h1>
+      <p class="intro">This independent personal application stores encrypted backups of its owner's Bitwarden vault in the owner's Google Drive and downloads them to check recoverability.</p>
+      <section aria-labelledby="purpose">
+        <h2 id="purpose">What the application does</h2>
+        <ol class="steps">
+          <li><strong>Encrypt before upload.</strong> The backup is encrypted on the owner's private system using a public recovery key.</li>
+          <li><strong>Store a dated copy.</strong> Only verified encrypted archives are uploaded to the owner's Google Drive.</li>
+          <li><strong>Check the stored copy.</strong> The application downloads the encrypted file, compares it with the original and verifies its archive and database integrity.</li>
+        </ol>
+        <p>The private recovery key is kept outside the backup server. The owner separately tests recovery with their own protected key copies.</p>
+      </section>
+      <section aria-labelledby="access">
+        <h2 id="access">Why Google access is requested</h2>
+        <p>The application uses Google Drive's <code>drive.file</code> permission to create and manage its backup files and folders and download them for verification. That permission applies to files created by the app or explicitly opened or shared with it; it does not grant unrestricted access to every file in Drive.</p>
+        <p>Google authorization happens through Google's own consent flow. This website has no sign-in form and collects no passwords, vault contents, recovery keys or Google credentials.</p>
+      </section>
+      <aside><h2>For the owner only</h2><p>This is documentation for a personal integration, not a public backup service. No vault or server endpoint is published here. The application is not operated by or affiliated with Bitwarden or Google.</p></aside>
+      <section aria-labelledby="contact"><h2 id="contact">Privacy and contact</h2><p>Read the <a href="./privacy/">privacy policy</a> for data access, storage, retention and revocation details. For questions, use the support email shown on the application's Google consent screen.</p></section>
+    </main>
+    <footer><span>Maintained by <a href="https://github.com/Nicklause2">Nicklause2</a></span><span><a href="./privacy/">Privacy policy</a> · <a href="./terms/">Terms of use</a></span></footer>
+  </div>
+</body>
+</html>
