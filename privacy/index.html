@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="How Personal Encrypted Vault Backup accesses, uses and stores Google Drive data.">
+  <title>Privacy policy · Personal Encrypted Vault Backup</title>
+  <link rel="canonical" href="https://nicklause2.github.io/privacy/">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page">
+    <header><a class="brand" href="../">Personal Encrypted Vault Backup</a><nav aria-label="Main"><a href="./" aria-current="page">Privacy</a><a href="../terms/">Terms</a></nav></header>
+    <main>
+      <p class="eyebrow">Last updated · 27 October 2026</p>
+      <h1>Privacy policy</h1>
+      <p class="intro">Personal Encrypted Vault Backup is an independent personal application maintained by Nicklause2 for the owner's own vault backups. It is not offered as a public service.</p>
+      <section><h2>Google data access and use</h2><p>The application requests <code>https://www.googleapis.com/auth/drive.file</code>. This permission covers files and folders created by the app, or explicitly opened or shared with it. The application uses it to create backup storage, upload encrypted archives and download those archives to verify their integrity.</p><p>The application processes encrypted archive bytes and operational metadata such as file names, identifiers, sizes and checksums. It stores OAuth access and refresh tokens to maintain the owner's authorized connection. It does not request access to Gmail, contacts or calendars, or unrestricted access to all Drive files.</p></section>
+      <section><h2>Vault data and encryption</h2><p>Vault backups are encrypted on the owner's private system before upload. No plaintext vault archive is uploaded to Google Drive or this website. Backup creation and verification process recovered data in memory; an isolated application recovery test uses temporary storage on the private system that is configured not to swap.</p><p>The long-term recovery private key is kept outside the backup server. Routine verification uses a separate random, per-archive secret held temporarily in memory and not retained. The public website receives no vault contents, recovery private keys or passphrases.</p></section>
+      <section><h2>Storage and safeguards</h2><p>Encrypted archives are kept in the owner's private backup storage and Google Drive. Connection credentials are stored in a restricted configuration on the owner's private backup system. Access is limited to the backup process and its administrator. This website contains no backup downloads, authentication credentials or private service addresses.</p></section>
+      <section><h2>Sharing and service providers</h2><p>Google receives the encrypted backup files and related Drive metadata to provide storage and retrieval. The application does not sell Google user data or use it for advertising, profiling or training machine-learning models. It does not share backup data with unrelated third parties.</p><p>GitHub hosts this public information website. GitHub documents that GitHub Pages logs visitor IP addresses for security purposes. The site adds no analytics scripts, advertising, forms or application cookies. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for their respective practices.</p></section>
+      <section><h2>Retention, deletion and revocation</h2><p>Dated encrypted backups are retained until the owner chooses to remove them; the application currently has no automatic deletion policy. The owner controls the backup files in their own storage and Drive account.</p><p>The owner can stop the backup schedule and revoke the application's access in <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future authorized access; it does not by itself delete existing backup files. The owner or administrator must separately remove any unwanted archives or saved connection configuration.</p></section>
+      <section><h2>Limited use</h2><p>The application's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Access is used only to provide the owner's requested backup and recovery functionality.</p></section>
+      <section><h2>Contact and changes</h2><p>Use the support email displayed on the application's Google consent screen for privacy or access questions. Do not send passwords, private keys or vault exports. This policy will be updated if the application's data practices change.</p></section>
+    </main>
+    <footer><a href="../">Application homepage</a><a href="../terms/">Terms of use</a></footer>
+  </div>
+</body>
+</html>
